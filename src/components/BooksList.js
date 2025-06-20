@@ -20,25 +20,24 @@ const BooksList = () => {
 
   return (
     <div>
-      <h1>NYT Books</h1>
+      <h1>Books List</h1>
 
       <div>
-        <label>
-          Sort By:
-          <select onChange={handleSortChange} value={sortBy}>
+        
+          <label htmlFor="sortBy">Sort by:</label>
+          <select id="sortBy" onChange={handleSortChange} value={sortBy}>
             <option value="title">Title</option>
             <option value="author">Author</option>
             <option value="publisher">Publisher</option>
           </select>
-        </label>
+        
 
-        <label>
-          Order:
-          <select onChange={handleOrderChange} value={order}>
+        <label htmlFor="order">Order:</label>
+          <select id="order" onChange={handleOrderChange} value={order}>
             <option value="asc">Ascending</option>
             <option value="desc">Descending</option>
           </select>
-        </label>
+        
       </div>
 
       {loading && <p>Loading books...</p>}
